@@ -22,12 +22,10 @@ const Transactions = () => {
     setPayment({ index, showInput: true });
   };
 
-  const handleChange = (e, index) => {
+  const handleKeyDown = (e, index) => {
     if (e.key === "Enter") {
       setPayment({ index: null, showInput: false });
       setQR({ index: index, showQR: true });
-    } else {
-      setUpi(e.target.value);
     }
   };
 
@@ -49,7 +47,8 @@ const Transactions = () => {
                 type="text"
                 className="upi"
                 placeholder="UPI ID"
-                onKeyDown={(e) => handleChange(e, index)}
+                onChange={(e) => setUpi(e.target.value)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
               />
             )}
             <div className="QR">
