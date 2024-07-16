@@ -1,0 +1,84 @@
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative; /* Make sure .transactions is relatively positioned */
+
+  .transaction {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .name {
+        font-weight: bold;
+        color: #5d5d5d;
+      }
+
+      .amount {
+        font-weight: bold;
+        color: #7d7dff;
+      }
+    }
+
+    button {
+      background-color: #ffd1dc;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      color: #5d5d5d;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #ffb3c1;
+      }
+    }
+
+    input {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #ffffff;
+      color: #5d5d5d;
+
+      &:focus {
+        border-color: #7d7dff;
+        outline: none;
+      }
+    }
+  }
+}
+
+.QR {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  right: 1rem; /* Fixed position to the right */
+  transform: translateY(-50%); /* Adjust for centering */
+  z-index: 1000; /* Ensure QR code appears over other content */
+
+  @media (max-width: 768px) {
+    right: 50%; /* Position at center if screen width is limited */
+    transform: translateX(50%) translateY(-50%);
+  }
+}

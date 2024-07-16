@@ -1,0 +1,128 @@
+.friends {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .userInput {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #ffffff;
+      color: #5d5d5d;
+
+      &:focus {
+        border-color: #7d7dff;
+        outline: none;
+      }
+    }
+
+    button {
+      flex: 0.03;
+      background-color: #68e76c;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      color: #5d5d5d;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #3bd440;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+  }
+
+  .list {
+    .friend {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .edit,
+      .noEdit {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        .info {
+          display: flex;
+          align-items: center;
+          text-wrap: wrap;
+          gap: 0.5rem;
+          font-weight: bold;
+          color: #5d5d5d;
+
+          svg {
+            color: #5d5d5d;
+          }
+
+          input {
+            padding: 0.25rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #ffffff;
+            color: #5d5d5d;
+
+            &:focus {
+              border-color: #7d7dff;
+              outline: none;
+            }
+          }
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          button {
+            background-color: #ffd1dc;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+              background-color: #ffb3c1;
+            }
+
+            svg {
+              color: #5d5d5d;
+            }
+          }
+        }
+      }
+    }
+  }
+}

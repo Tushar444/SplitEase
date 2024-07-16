@@ -1,0 +1,50 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    .friends-btn,
+    .expenses-btn,
+    .transactions-btn {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #5d5d5d;
+      background-color: #c8e6c9;
+      transition: background-color 0.2s;
+
+      svg {
+        margin-bottom: 0.25rem;
+        color: #5d5d5d;
+      }
+
+      &:hover {
+        background-color: #a5d6a7;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+  }
+}
